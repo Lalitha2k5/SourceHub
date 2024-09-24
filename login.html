@@ -3,16 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up</title>
-</head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="login.css"> <script src="script.js"></script> </head>
 <body>
-    <h1 class="" style="color: blueviolet;">Create account</h1>
-  <h4>Enter name: <input type="text" placeholder="full name"></h4>
-  <h4>Enter phone number: <input type="number" placeholder="10 digits number"></h4>
-  <h4>Enter mail: <input type="email" placeholder="example@gmail.com"></h4>
-  <h4>Enter date of birth: <input type="date"></h4>
-  <h4>Set password: <input type="password"> <h6>..  ..password must contain 12 characters and include a mix of uppercase and lowercase letters, numbers and special characters</h6></h4><br>
-<a href="source.html"><input type="submit" style="color: red;"></a>
+
+    <header>
+        <h1>Create Account</h1>
+        <p>Welcome to our platform!</p>
+    </header>
+
+    <main>
+        <form id="signup-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (10 digits)" pattern="[0-9]{10}" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password (minimum 12 characters)" required>
+
+            <div id="password-strength">
+                <p>Password Strength: <span id="strength-meter"></span></p>
+                <ul>
+                    <li class="strength-level">Weak</li>
+                    <li class="strength-level">Medium</li>
+                    <li class="strength-level">Strong</li>
+                </ul>
+            </div>
+
+            <p class="password-hint">Your password must contain a mix of uppercase and lowercase letters, numbers, and special characters.</p>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
 
 </body>
 </html>
